@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap");
+
+.logo {
+  font-family: "Lexend Mega", sans-serif;
+  text-decoration: none;
+  color: whitesmoke;
+  padding-top: 0.7em;
+  top: 0%;
+  right: 45%;
+  left: 45%;
+  position: absolute;
+}
+
+.logo a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.logo img{
+  object-fit: fill;
+
+  width: 80px;
+  height: 45px;
+  border: solid 1px #ccc;
+}
+
+.mobile {
+  top: 0%;
+  z-index: 10;
+  width: 100%;
+  height: 4em;
+  position: fixed;
+  background-color: #2e0101;
+}
+
+.hamburger {
+  position: absolute;
+  width: 5%;
+  padding-left: 1em;
+  padding-top: 0.75em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.line {
+  background: whitesmoke;
+  margin-bottom: 6px;
+  width: 30px;
+  height: 3px;
+  border-radius: 100px;
+}
+
+.nav-links {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  background: black;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+
+}
+.nav-links a{
+  font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.nav-links a:first-child {
+  margin-top: 3em;
+}
+
+.nav-links.open {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  background: black;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+
+  transform: translateX(0%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Lexend Mega", sans-serif;
+  color: whitesmoke;
+  padding: 1.5em 0.5em;
+}
+
+.nav-links a:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+@media (min-width: 930px) {
+  .hamburger {
+    display: none;
+  }
+
+  .logo {
+    top: 0%;
+    right: 90%;
+    position: static;
+    padding-top: 1em;
+    padding-left: 1em;
+  }
+
+  .mobile {
+    position: fixed;
+  }
+
+  .nav-links a:first-child {
+    margin-top: 0em;
+    padding: 1em 1em 0em 1em;
+  }
+
+  .nav-links a {
+    padding: 1em 1.4em 0em 1.4em;
+  }
+
+  .nav-links a:hover {
+    color: orangered;
+  }
+
+  .nav-links {
+    top: 0%;
+    right: 0%;
+    position: absolute;
+    height: 3em;
+    width: auto;
+    opacity: 0.6;
+    transform: translateX(0%);
+    transition-duration: 0s;
+    flex-direction: row;
+  }
+
+  .nav-links.open {
+    top: 0%;
+    right: 0%;
+    position: absolute;
+    height: 3em;
+    width: auto;
+    opacity: 0.6;
+    flex-direction: row;
+    transition-duration: 0s;
+
+    border-radius: 0;
+  }
+}
